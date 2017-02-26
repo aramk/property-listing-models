@@ -1,3 +1,1 @@
-# Rental Property Models
-
-
+# Property Listing Models
