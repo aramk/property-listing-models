@@ -14,7 +14,7 @@ const schema = new Schema({
     url: String
   },
   description: RequiredString,
-  publishDate: { type: String, required: true },
+  publishDate: { type: Date, required: true },
   floors: Number,
   bedrooms: Number,
   bathrooms: Number,
@@ -27,11 +27,6 @@ const schema = new Schema({
     type: String,
     required: true,
     enum: ['active', 'offered', 'inactive']
-  },
-  landUse: {
-    type: String,
-    required: true,
-    default: 'Residential'
   },
   propertyType: RequiredString,
   price: RequiredString,

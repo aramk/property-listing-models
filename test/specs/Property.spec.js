@@ -38,7 +38,7 @@ describe('Property', () => {
     });
     expect(prop._id).to.be.a.string;
     const error = prop.validateSync();
-    expect(error).to.not.be.defined;
+    expect(error).to.be.undefined;
   });
 
 });
