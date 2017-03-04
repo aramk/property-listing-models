@@ -7,7 +7,7 @@
     "lint": "./node_modules/eslint/bin/eslint.js src/**/*.js test/**/*.js",
     "coverage": "istanbul cover _mocha -- -R dot --recursive test/",
     "pretest": "npm run lint",
-    "test": "multi='mocha-osx-reporter=- spec=-' mocha './test/**/*.spec.js' --require ./test/helper.js --reporter mocha-multi",
+    "test": "multi='mocha-osx-reporter=- spec=-' mocha ./test/helper.js './test/**/*.spec.js' --reporter mocha-multi",
     "test:watch": "chokidar 'src/**/*' 'test/**/*' -c 'npm test' --initial --silent"
   },
   "author": "Aram Kocharyan <akarmenia@gmail.com>",
@@ -17,10 +17,12 @@
     "chai-as-promised": "^6.0.0",
     "chokidar-cli": "^1.2.0",
     "eslint": "^2.12.0",
+    "envobj": "^1.0.3",
     "istanbul": "^0.4.5",
     "mocha": "^3.1.2",
     "mocha-multi": "^0.10.0",
-    "mocha-osx-reporter": "^0.1.2"
+    "mocha-osx-reporter": "^0.1.2",
+    "q": "^1.4.1"
   },
   "dependencies": {
     "lodash": "^4.15.0",
